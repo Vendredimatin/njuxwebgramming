@@ -1,0 +1,28 @@
+<table style="width: 200px; height: 100px; " border="1">...</table>
+
+<input type="text" id="txtInput" style="width: 100px" />
+
+<button style="width: 50px" onclick="onButtonClick()">Button</button>
+
+		<script type="text/javascript">
+			function onButtonClick() {
+				var inputValue;
+				inputValue = document.getElementById("txtInput").value;
+				document.getElementById("td").innerText = inputValue;
+			}
+		</script>
+
+
+align="left|right|center"
+valign="top|bottom|middle"
+
+style="background-color: #ff0000; color: #0000ff"
+
+<table>  cellpadding cellspacing="10 | 0 | default"
+css: padding margin
+
+没有边框的表格：不设置border
+只有某一边的表格：单独设置每一个单元格
+
+css: border-collapse: collapse | separate(default)
+
