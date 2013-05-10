@@ -1,0 +1,464 @@
+#mainDiv{
+  /* 
+     "#mainDiv" 定义了一个css样式，"mainDiv"是这个样式的名称
+      "#" 定义了这个css引用的方式，该方式是使用id引用。引用见source.html中的"<div id="mainDiv">"
+	   引用了此css以后，就相当于在"<div id="mainDiv">"里面添上下面这样一段代码
+		style="width: 230px;height: 517px;background-image: url("images/bg.jpg");"
+		以“{”开始，以“}”结束此样式的定义
+  */
+    	
+	position: absolute;
+	/*
+	  设置div绝对定位,position规定元素的定位类型,absolute表示绝对定位相对于static定位以外的
+	  第一个父元素进行定位,元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定
+	   static默认值,没有定位,元素出现在正常的流中;fixed 生成绝对定位的元素,相对于浏览器窗口进行定位
+       relative 生成相对定位的元素,相对于其正常位置进行定位
+	*/
+
+	left :16px;
+	/*设置div距离浏览器左边16像素*/
+	
+	top:20px;
+	/*设置div距离浏览器上边20像素*/
+	
+	width: 230px;
+	/*设置div宽度为230像素,width表示宽度,230px表示230个像素*/
+
+	height: 517px;
+	/*设置div高度为517像素,height表示高度,517px表示517个像素*/
+	
+	background-image: url("images/bg.jpg");
+	/*设置div的背景图片是“images/bg.jpg”。*/
+	
+	background-repeat:no-repeat;
+	/*
+	  设置div的背景图片不重复。
+	   background-repeat设置是否及如何重复背景图像,no-repeat背景图像将仅显示一次
+	    默认地repeat表示背景图像在水平和垂直方向上重复,repeat-x表示背景图像将在水平方向重复,
+	    repeat-y背景图像将在垂直方向重复
+    */
+	
+	background-position: 0px 0px;
+	/*设置div的背景图片的位置在水平及垂直的 0 ，0 位置。*/
+
+}
+/*'}'表示样式结束*/
+
+.headerDiv{
+/* 
+  ".headerDiv" 定义了一个css样式，"headerDiv"是这个样式的名称
+  "." 定义了这个css引用的方式，该方式是使用class引用。引用见source.html中的"<div class="headerDiv">"
+*/
+
+	width: 100%;
+	/*设置div宽度为100%*/
+
+	height: 29.5px !important;
+	/*设置div高度为29.5像素*/
+	height: 20px;
+	/*
+		设置div高度为20像素
+		由于各个浏览器的不像素大小不一样，有时候需要对一个浏览器进行单独设置
+		“height: 20px;”和“height: 29.5px !important;” 设置的都是div的高度，在IE6下，浏览器会识别“height: 20px;”
+		如果设置了“height: 29.5px !important;”在IE7，IE8下会识别此项目
+		如果没有设置，height: 29.5px !important;”IE7,IE8也会去自动识别“height: 20px;”
+	*/
+	
+	text-align: center;
+	/*设置div中文字居中,text-align表示文字对齐方式,center表示居中,"left"表示靠左,"right"表示靠右*/
+	
+	font-weight: bold;
+	/*设置div中文字加粗,font-weight表示文字粗细,bold表示加粗*/
+	
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	/*
+		设置div中文字字体,
+		font-family表示文字字体,可以把多个字体名称作为一个"回退"系统来保存,如果浏览器不支持第一个字体,则会尝试下一个
+		"helvetica,tahoma,verdana,sans-serif"表示字体的选择顺序
+	*/
+
+}
+/*'}'表示样式结束*/
+
+.childDiv1{
+/*".childDiv1" 定义了一个css样式，"childDiv1"是这个样式的名称*/
+
+	width: 60%;
+	/*设置div宽度为60%*/
+
+	height: 32px;
+	/*设置div高度为32像素*/
+
+	text-align: center;
+	/*设置div中文字居中*/
+	
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	/*设置div中文字字体*/	
+}
+/*'}'表示样式结束*/
+
+.childDiv2{
+/*".childDiv2" 定义了一个css样式，"childDiv2"是这个样式的名称*/
+
+	width: 60%;
+	/*设置div宽度为60%*/
+
+	height: 30px;
+	/*设置div高度为30像素*/
+
+	text-align: center;
+	/*设置div中文字居中*/
+	
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	/*设置div中文字字体*/
+
+}
+/*'}'表示样式结束*/
+
+
+.footDiv{
+/*".footDiv" 定义了一个css样式，"footDiv"是这个样式的名称*/
+
+	width: 100%;
+	/*设置div宽度为100%*/
+
+	height: 33px;
+	/*设置div高度为33像素*/
+
+	text-align: center;
+	/*设置div中文字居中*/
+
+	font-weight: bold;
+	/*设置div中文字加粗*/
+
+	font-family: helvetica,tahoma,verdana,sans-serif;
+	/*设置div中文字字体*/
+
+}
+/*'}'表示样式结束*/
+
+.headMenu{
+/*".headMenu" 定义了一个css样式，"headMenu"是这个样式的名称*/
+
+	width: 100%;
+	/*设置div宽度为100%*/
+
+	height: 100%;
+	/*设置div高度为100%*/
+
+	padding-top: 9px;
+	/*
+		设置div的上内边距为9像素
+		padding-top表示元素的上内边距,9px表示上内边距为9像素
+		padding设置所有内边距属性,padding-bottom设置元素的下内边距,
+		padding-left设置元素的左内边距,padding设置元素的右内边距
+	*/
+
+	padding-left: 25px;
+	/*设置div的左内边距为25像素*/
+
+	text-align: left;
+	/*设置div中文字靠左*/
+
+}
+/*'}'表示样式结束*/
+
+.divMenu1{
+/*".divMenu1" 定义了一个css样式，"divMenu1"是这个样式的名称*/
+
+	width: 80%;
+	/*设置div宽度为80%*/
+
+	height: 100%;
+	/*设置div高度为100%*/
+
+	padding-top: 9px;
+	/*设置div的上内边距为9像素*/
+
+	padding-left: 50px;
+	/*设置div的左内边距为50像素*/
+
+	text-align: left;
+	/*设置div中文字靠左*/
+	
+	background-image: url("images/li.png");
+	/*设置div的背景图片是“images/li.png”。*/
+	
+	background-repeat:no-repeat;
+
+	/*设置div的背景图片不重复。*/
+	
+	background-position: 6px 3.5px;
+	/*设置div的背景图片位置,第一个值是水平位置，第二个值是垂直位置*/
+	
+	z-index: 10;
+	/*
+		设置div的堆叠顺序,z-index值较大的元素将叠加在z-index值较小的元素之上
+		对于未指定此属性的定位对象,z-index值为正数的对象会在其之上,而z-index值为负数的对象在其之下
+	*/
+
+	display: none;
+	/* display:none不显示该块内容；display：block显示该块内容*/
+
+}
+/*'}'表示样式结束*/
+
+.divMenu2{
+/*".divMenu2" 定义了一个css样式，"divMenu2"是这个样式的名称*/
+
+	width: 80%;
+	/*设置div宽度为80%*/
+
+	height: 100%;
+	/*设置div高度为100%*/
+
+	padding-top: 9px;
+	/*设置div的上内边距为9像素*/
+
+	padding-left: 50px;
+	/*设置div的左内边距为50像素*/
+
+	text-align: left;
+	/*设置div中文字靠左*/
+
+	background-image: url("images/li.png");
+	/*设置div的背景图片是“images/li.png”。*/
+
+	background-repeat:no-repeat;
+	/*设置div的背景图片不重复。*/
+
+	background-position: 6px 1px;
+	/*设置div的背景图片位置*/
+
+	z-index: 10;
+	/*设置div的堆叠顺序*/
+
+	display: none;
+	/* display:none不显示该块内容*/
+
+}
+/*'}'表示样式结束*/
+
+a{
+/*设置页面中所有的链接,"{"表示样式开始*/
+
+	text-decoration: none;
+	/*
+		设置链接没有下划线
+		"none"为没有下划线,"underline"定义文本下的一条线,overline定义文本上的一条线
+		line-through定义穿过文本下的一条线,blink定义闪烁的文本  
+	*/
+	
+	cursor: pointer;
+	/*设置鼠标移动到链接上以后变成小手图标*/
+}
+/*'}'表示样式结束*/
+
+a:hover{
+/*设置页面中所有的链接,鼠标选中的时候的样式,"{"表示样式开始*/
+
+	text-decoration: underline;
+	/*设置链接有下划线*/
+
+}
+/*'}'表示样式结束*/
+
+.ahead{
+/*".ahead" 定义了一个css样式，"ahead"是这个样式的名称*/
+
+	color:#000000;
+	/*设置字体颜色为#000000*/
+
+	font-size: 14px;
+	/*设置字体大小为14像素*/
+
+}
+/*'}'表示样式结束*/
+
+.aMenu{
+/*".aMenu" 定义了一个css样式，"aMenu"是这个样式的名称*/
+
+	color: #B45A01;
+	/*设置字体颜色为#B45A01*/
+
+	font-size: 13px;
+	/*设置字体大小为13像素*/
+
+}
+/*'}'表示样式结束*/
+
+.afoot{
+/*".afoot" 定义了一个css样式，"afoot"是这个样式的名称*/
+
+	color: #666666;
+	/*设置字体颜色为#666666*/
+
+	font-size: 13px;
+	/*设置字体大小为13像素*/
+
+}
+/*'}'表示样式结束*/
+
+#div11{
+/*"#div11" 定义了一个css样式，"div11"是这个样式的名称*/
+
+	width: 104px;
+	/*设置div宽度为104像素*/
+
+	height: 29px;
+	/*设置div高度为29像素*/
+	
+	font-weight: bold;
+	/*设置div中文字加粗*/
+
+	position: absolute;
+	/*
+		设置div绝对定位,position规定元素的定位类型,absolute表示绝对定位相对于static定位以外的
+		第一个父元素进行定位,元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定
+		static默认值,没有定位,元素出现在正常的流中;fixed 生成绝对定位的元素,相对于浏览器窗口进行定位
+		relative生成相对定位的元素,相对于其正常位置进行定位
+	*/
+
+	z-index: 100;
+	/*设置div的堆叠顺序*/
+
+	left: 20px;
+	/*设置div距离浏览器左边20像素*/
+
+	top:42px;
+	/*设置div距离浏览器上方42像素*/
+
+	text-align:left;
+	/*设置div中文字靠左*/
+
+	padding-left: 41px;
+	/*设置div的左内边距为41像素*/
+
+	padding-top: 0px;
+	/*设置div的上内边距为0像素*/
+
+}
+/*'}'表示样式结束*/
+
+#div12{
+/*"#div12" 定义了一个css样式，"div12"是这个样式的名称*/
+
+	width: 442px;
+	/*设置div宽度为442像素*/
+
+	height: 448px;
+	/*设置div高度为348像素*/
+
+	padding-top: 100px;
+	/*设置div的上内边距为100像素*/
+
+	position: absolute;
+	/*设置div定位方式*/
+
+	z-index: 100;
+	/*设置div的堆叠顺序*/
+
+	left: 160px;
+	/*设置div距离左边160像素*/
+
+	top:32.5px;
+	/*设置div距离上方32.5像素*/
+
+	background-image: url("images/1.jpg");
+	/*设置div的背景图片是“images/1.jpg”。*/
+
+	background-repeat:no-repeat;
+	/*设置div的背景图片不重复。*/
+
+	background-position: 0px 0px;
+	/*设置div的背景图片位置*/
+
+	display: none;
+	/* display:none不显示该块内容*/
+
+}
+/*'}'表示样式结束*/
+
+#div21{
+/*"#div21" 定义了一个css样式，"div21"是这个样式的名称*/
+
+	width: 104px;
+	/*设置div宽度为104像素*/
+
+	height: 29px;
+	/*设置div高度为29像素*/
+	
+	font-weight: bold;
+	/*设置div中文字加粗*/
+
+	position: absolute;
+	/*设置div定位方式*/
+
+	z-index: 100;
+	/*设置div的堆叠顺序*/
+
+	left: 20px;
+	/*设置div距离左边20像素*/
+
+	top:72px;
+	/*设置div距离上方72像素*/
+
+	text-align:left;
+	/*设置div中文字靠左*/
+
+	padding-left: 41px;
+	/*设置div的左内边距为41像素*/
+
+	padding-top: 2px;
+	/*设置div的上内边距为2像素*/
+
+}
+/*'}'表示样式结束*/
+
+#div22{
+/*"#div22" 定义了一个css样式，"div22"是这个样式的名称*/
+
+	width: 442px;
+	/*设置div宽度为442像素*/
+
+	height: 292px;
+	/*设置div高度为292像素*/
+
+	padding-top: 100px;
+	/*设置div的上内边距为100像素*/
+
+	position: absolute;
+	/*设置div定位方式*/
+
+	z-index: 100;
+	/*设置div的堆叠顺序*/
+
+	left: 160px;
+	/*设置div距离左边160像素*/
+
+	top:32.5px;
+	/*设置div距离上方32.5像素*/
+
+	background-image: url("images/2.jpg");
+	/*设置div的背景图片是“images/2.jpg”。*/
+
+	background-repeat:no-repeat;
+	/*设置div的背景图片不重复。*/
+
+	background-position: 0px 0px;
+	/*设置div的背景图片位置*/
+
+	display: none;
+	/* display:none不显示该块内容*/
+
+}
+/*'}'表示样式结束*/
+
+
+/*
+	注：1、font-family表示文字字体,可以把多个字体名称作为一个"回退"系统来保存,如果浏览器不支持第一个字体,则会尝试下一个
+			"helvetica,tahoma,verdana,sans-serif"表示字体的选择顺序
+		2、text-decoration设置链接有没有下划线。"none"为没有下划线,"underline"定义文本下的一条线,overline定义文本上的一条线
+			line-through定义穿过文本下的一条线,blink定义闪烁的文本
+		3、cursor: pointer设置鼠标移动到链接上以后变成小手图标
+*/

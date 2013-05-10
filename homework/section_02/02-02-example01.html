@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!--这是一个声明。声明此网页遵循W3C所制定的DTD规则,定义了HTML的规范、版本和语言等信息-->
+
+<html>
+<!--<html>标签定义了整个 HTML 文档，它拥有一个开始标签 <html>，以及一个结束标签 </html>，一个HTML里面的所有内容都应该在这两个标签内-->
+
+	<head>
+	<!--<head>标签用于定义文档的头部开始，它是所有头部元素的容器。-->
+
+		<title>htmlDiv1</title>
+		<!--<title>标签可定义HTML文档的标题，此标签的内容会显示在浏览器的左上方-->
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!--本行定义html页面在展示的时候使用什么编码-->
+
+		<style type="text/css">
+		/*这个是CSS文档声明，声明是CSS文本文件，装的都是CSS代码*/
+
+			div {
+			/* 
+				"div"定义了该页面中div的样式
+				相当于在该页面中所有<div>里面添上下面这样一段代码
+				style="border-style:solid;border-color: #00ff00;border-width: 1px;"
+				以“{”开始，以“}”结束此样式的定义
+			*/
+
+				border-style:solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #00ff00;
+				/* border-color定义边框颜色，#00ff00表示绿色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.container{
+			/* ".container" 定义了一个css样式，"container"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				width: 400px;
+				/* width定义宽度，宽度400像素*/
+
+				height: 280px;
+				/* height定义高度，高度280像素*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.leftDiv {
+			/* ".leftDiv" 定义了一个css样式，"leftDiv"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+			    float: left;
+				/* float指定对象是否及如何浮动的属性。left左浮动；right右浮动；none无浮动*/
+
+			    height: 95%;
+				/* height定义高度，高度为外部最邻近容器高度的95%*/
+
+			    width: 45%;
+				/* width定义宽度，宽度为外部最邻近容器宽度的45%*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.rightDiv {
+			/* ".rightDiv" 定义了一个css样式，"rightDiv"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+			    float: right;
+				/* float指定对象是否及如何浮动的属性。left左浮动；right右浮动；none无浮动*/
+
+			    height: 95%;
+				/* width定义高度，高度为外部最邻近容器高度的95%*/
+
+			    width: 45%;
+				/* width定义宽度，宽度为外部最邻近容器宽度的45%*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+		</style>
+		<!--</style>是<style>的结束标签，表示css文本样式定义到此结束-->
+
+   </head>
+   <!--</head>是<head>的结束标签，表示HTML文档的头部结束-->
+
+	<body>
+	<!--<body>标签定义HTML文档的主体开始，将以</body>标记结束-->
+
+  		<h5>1.div的布局1</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div style="width: 400px;height: 280px;">
+		<!--
+			div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素，<div></div>之间的所有内容都是用来构成这个块的
+			在上面的css定义中，已经定义了所有div的共同属性，因此这个div具备上述已定义的样式
+			style是样式定义，width宽度为400像素，height高度为280像素，在这里相当于是一个补充样式
+		-->
+
+			<div style="width: 300px;height: 45%;"></div>
+			<!--
+				这是嵌套的第一个div
+				style是样式定义，width宽度是300像素，而由于这个div位于外部<div></div>之间，属于嵌套div，所以它的height高度45%表示高度是外部div（最邻近的）高度的45%
+				</div>是<div>的结束标签（就近原则，一对一）
+			-->
+
+			<div style="width: 300px;height: 45%;"></div>
+			<!--这是嵌套的第二个div-->
+
+  		</div>
+  		<!--</div>是<div>的结束标签-->
+
+  		<h5>2.两个并排的div</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="container">
+		<!--这是一个div。class是样式选择，class="container"表示这里的div采用上面css定义中的container样式-->
+
+			<div class="leftDiv">我是左边的</div>
+			<!--这是嵌套的第一个div-->
+
+			<div class="rightDiv">我是右边的</div>
+			<!--这是嵌套的第二个div-->
+
+  		</div>
+		<!--</div>是<div>的结束标签-->
+
+	</body>
+	<!--</body>是<body>的结束标签，表示HTML文档的主体结束-->
+
+</html>
+<!--</html>是<html>的结束标签，表示HTML文档结束-->
+
+
+<!-- 
+	注：在css样式中：float指定对象是否及如何浮动的属性。left左浮动；right右浮动；none无浮动
+-->

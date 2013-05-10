@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!--这是一个声明。声明此网页遵循W3C所制定的DTD规则,定义了HTML的规范、版本和语言等信息-->
+
+<html>
+<!--<html>标签定义了整个 HTML 文档，它拥有一个开始标签 <html>，以及一个结束标签 </html>，一个HTML里面的所有内容都应该在这两个标签内-->
+
+	<head>
+	<!--<head>标签用于定义文档的头部开始，它是所有头部元素的容器。-->
+
+		<title>htmlDiv4</title>
+		<!--<title>标签可定义HTML文档的标题，此标签的内容会显示在浏览器的左上方；</title>是<title>的结束标签；<title></title>之间是显示的内容-->
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!--本行定义html页面在展示的时候使用什么编码-->
+
+		<link rel="stylesheet" type="text/css" href="02-04-example-css.css" />
+		<!-- 
+			应用外面的css文件，即外部样式，相当于把原来的<style type="text/css"></style>中的内容提到单独的一个文件中，文件为 div.css
+			<link> 标签定义文档与外部资源的关系,rel="stylesheet"指关联到一个stylesheet(样式表单)
+			type规定被链接文档的MIME类型,"text/css"表示链接一个css样式表,href="div.css"表示引用的文件名为"div.css"
+		-->
+		
+		<script language="javascript" type="text/javascript" src="02-04-example-js.js"></script>
+		<!-- 
+			应用外面的js文件,相当于把原来的<script type="text/javascript"></script>中的内容提到单独的一个文件中,文件为div.js
+				language="javascript"告诉浏览器这是用javascript编写的程序
+				type规定被链接文档的MIME类型,"text/javascript"表示链接一个javascript函数
+				src="div.js"表示引用的文件名为"div.js"
+		-->
+		  
+	</head>
+	<!--<head>的结束标签-->
+
+	<body>
+	<!--<body>标签定义HTML文档的主体开始，将以</body>标记结束-->
+
+		<div id="mainDiv">
+		<!--
+			div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素
+			<div></div>之间的所有内容都是用来构成这个块的
+			id是样式选择，id="mainDiv"表示要调用div.css文件中的"#mainDiv"
+		-->	
+		
+			<div class="headerDiv" >
+			<!-- class="headerDiv" 表示要调用div.css文件中的".headerDiv"-->
+				
+				<div class="headMenu">
+				<!--表示该div要调用div.css文件中的".headDiv"-->
+
+					<a class="ahead" href="#">全部商品分类</a>
+					<!--
+						<a>标签可定义锚,class="ahead" 表示要调用div.css文件中的".ahead"
+							href="#"表示链接的目标 URL为空
+					-->
+
+				</div>
+				<!--</div>是<div>的结束标签-->
+
+			</div>
+			<!--<div>的结束标签-->
+
+			<div class="childDiv1" onmouseover="onMouseOver1()" onmouseout="onMouseOut1()">
+			<!--
+				该行指明了这个div将要调用的javascript函数
+				onmouseover="onMouseOver1()" onmouseout="onMouseOut1()"
+				onmouseover表示鼠标移动到这个div上面以后要调用javascript函数“onMouseOver1()”，这个函数在div.js文件中
+				onmouseout表示鼠标移出这个div上面以后要调用javascript函数“onMouseOut1()”，这个函数在div.js文件中
+			-->
+				 
+				<div id="divMenu1" class="divMenu1"></div>
+				<!--
+					"id"是页面元素的标识,同样ID在页面里也只能出现一次,并且是唯一性
+					class="divMenu1"表示要调用div.css文件中的".divMenu1"
+				-->
+
+				<div id="div11">
+				<!--表示该div要调用div.css文件中的"#div11"-->
+
+					<a class="aMenu" href="#">图书音像</a>
+					<!--该标签表示要调用div.css文件中的".aMenu",链接的目标 URL为空-->
+
+				</div>
+				<!--<div>的结束标签-->
+
+				<div id="div12">
+				<!--表示该div要调用div.css文件中的"#div12"-->
+
+					<a class="aMenu" href="#">图书音像</a>
+					<!--该标签表示要调用div.css文件中的".aMenu",链接的目标 URL为空-->
+
+				</div>
+				<!--<div>的结束标签-->
+
+			</div>
+			<!--<div>的结束标签-->
+
+			<div class="childDiv2" onmouseover="onMouseOver2()" onmouseout="onMouseOut2()">
+				<!--
+					该行指明了这个div将要调用的javascript函数
+					onmouseover="onMouseOver2()" onmouseout="onMouseOut2()"
+					onmouseover 表示鼠标移动到这个div上面以后要调用javascript函数“onMouseOver2()”，这个函数在div.js文件中
+					onmouseout 表示鼠标移出这个div上面以后要调用javascript函数“onMouseOut2()”，这个函数在div.js文件中
+				-->
+			
+				<div id="divMenu2" class="divMenu2"></div>
+				<!--表示要调用div.css文件中的".divMenu2"-->
+
+				<div id="div21">
+				<!--表示该div要调用div.css文件中的"#div21"-->
+
+					<a class="aMenu"  href="#">手机数码</a>
+					<!--该标签表示要调用div.css文件中的".aMenu",链接的目标 URL为空-->
+
+				</div>
+				<!--<div>的结束标签-->
+
+				<div id="div22">
+				<!--表示该div要调用div.css文件中的"#div22"-->
+
+					<a class="aMenu" href="#">手机数码</a>
+					<!--该标签表示要调用div.css文件中的".aMenu",链接的目标 URL为空-->
+
+				</div>
+				<!--<div>的结束标签-->
+
+			</div>
+			<!--<div>的结束标签-->
+
+		</div>
+		<!--<div>的结束标签-->
+
+	</body>
+	<!--</body>是<body>的结束标签，表示HTML文档的主体结束-->
+
+</html>
+<!--</html>是<html>的结束标签，表示HTML文档结束-->
+
+<!-- 
+	注：1、onmouseover表示鼠标移动到这个元素上面
+		2、onmouseout表示鼠标移出这个元素
+		3、<a> 标签可定义锚。锚 (anchor) 有两种用法：
+			通过使用 href 属性，创建指向另外一个文档的链接（或超链接） 
+			通过使用 name 或 id 属性，创建一个文档内部的书签（也就是说，可以创建指向文档片段的链接） 
+			<a>元素最重要的属性是 href 属性，它指定链接的目标。
+		4、<link> 标签定义文档与外部资源的关系。<link> 标签最常见的用途是链接样式表。
+			link 元素是空元素，它仅包含属性。此元素只能存在于 head 部分，不过它可出现任何次数。
+			例如：<link rel="stylesheet" type="text/css" href="div.css" />
+-->

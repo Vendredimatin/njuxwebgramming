@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!--这是一个声明。声明此网页遵循W3C所制定的DTD规则,定义了HTML的规范、版本和语言等信息-->
+
+<html>
+<!--<html>标签定义了整个 HTML 文档，它拥有一个开始标签 <html>，以及一个结束标签 </html>，一个HTML里面的所有内容都应该在这两个标签内-->
+
+	<head>
+	<!--<head>标签用于定义文档的头部开始，它是所有头部元素的容器。-->
+
+		<title>htmlDiv1</title>
+		<!--<title>标签可定义HTML文档的标题，此标签的内容会显示在浏览器的左上方；</title>是<title>的结束标签；<title></title>之间是显示的内容-->
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!--本行定义html页面在展示的时候使用什么编码-->
+
+		<style type="text/css">
+		/*这个是CSS文档声明，声明是CSS文本文件，装的都是CSS代码*/
+
+			.div1 {
+				/* 
+					".div1" 定义了一个css样式，"div1"是这个样式的名称
+					"." 定义了这个css引用的方式，该方式是使用class引用。引用见下面的"<div class="div1">"
+					引用了此css以后，就相当于在"<div class="div1">"里面添上下面这样一段代码
+					style="width:400px;height:100px;border-style:solid;border-color: #ff0000;border-width: 1px;text-align: center;"
+				*/
+
+				width:400px;
+				/* width定义宽度，宽度400像素*/
+
+				height:100px;
+				/* height定义高度，高度100像素*/
+
+				border-style: solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #ff0000;
+				/* border-color定义边框颜色，#ff0000表示红色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+				text-align: center;
+				/* text-align定义文本水平对齐方向，center表示水平居中；此外left表示水平靠左，right表示水平靠右*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.div2 {
+			/*".div2" 定义了一个css样式，"div2"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				width:400px;
+				/* width定义宽度，宽度400像素*/
+
+				height:100px;
+				/* height定义高度，高度100像素*/
+
+				border-style: solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #ff0000;
+				/* border-color定义边框颜色，#ff0000表示红色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+				padding-top: 20px;
+				/* padding-top设置元素的上内边距，这里表示这个div里的内容距离上边框的距离为20像素*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.div3 {
+			/*".div3" 定义了一个css样式，"div3"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				width:350px;
+				/* width定义宽度，宽度350像素*/
+
+				height:70px;
+				/* height定义高度，高度70像素*/
+
+				border-style: solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #00ff00;
+				/* border-color定义边框颜色，#00ff00表示绿色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.div4 {
+			/*".div4" 定义了一个css样式，"div4"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				width:350px;
+				/* width定义宽度，宽度350像素*/
+
+				height:70px;
+				/* height定义高度，高度70像素*/
+
+				border-style: solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #00ff00;
+				/* border-color定义边框颜色，#00ff00表示绿色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+				margin-top: 25px;
+				/*定义距离上一个div的距离，这里是距离上面20像素*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			.div5 {
+			/*".div5" 定义了一个css样式，"div5"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				width:400px;
+				/* width定义宽度，宽度350像素*/
+
+				height:100px;
+				/* height定义高度，高度70像素*/
+
+				border-style: solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #ff0000;
+				/* border-color定义边框颜色，#ff0000表示红色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+				text-align: center;
+				/* text-align定义文本水平对齐方向，center表示水平居中；此外left表示水平靠左，right表示水平靠右*/
+
+				background-image: url("http://www.baidu.com/img/baidu_logo.gif");
+				/* 
+					backgroud-image定义背景图片，url代表图片地址
+					http://www.baidu.com/img/baidu_logo.gif表示引用图片的地址是绝对地址(完整路径)并且是外部引用
+				*/
+
+				background-repeat:no-repeat;
+				/* 
+					backgroud-repeat设置背景图片是否及如何铺排，no-repeat背景图像不平铺
+					此外该项还有其他可设置的参数如下
+					repeat背景图像在纵向和横向上平铺
+				   repeat-x背景图像在横向上平铺
+					repeat-y背景图像在纵向平铺
+				 */
+
+				background-position: center center;
+				/*
+					backgroud-position定义了背景位置，后面有两个属性，第一个是水平位置，第二个是垂直方向的位置
+					第一个center表示水平居中；第2个center表示垂直居中
+				*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+		</style>
+		<!--</style>是<style>的结束标签，表示css文本样式定义到此结束-->
+
+	</head>
+	<!--</head>是<head>的结束标签，表示HTML文档的头部结束-->
+
+	<body>
+	<!--<body>标签定义HTML文档的主体开始，将以</body>标记结束-->
+
+  		<h5>1.什么是DIV</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="div1">
+		<!--
+			定义一个div
+			div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素，<div></div>之间的所有内容都是用来构成这个块的
+			class是样式选择，class="div1"表示这里的div采用上面css定义中的div1样式
+		-->
+
+  			<h5>我是一个DIV</h5>
+			<!--
+				<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字
+				由于此内容位于<div></div>标签之间，所以它的样式受div样式的限制
+			-->
+
+  		</div>
+		<!--</div>是<div>的结束标签-->
+  			
+  		<h5>2.没有设置padding的div</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="div1">
+		<!--定义一个div-->
+
+			<table border="1" style="width: 100%;height: 100%;">
+			<!--
+				table定义了一个表格，边框粗细为1，宽度和高度都为100%
+				这个表格位于<div></div>之间，所以它的高度和宽度受此div样式的限制
+			-->
+			
+				<tr>
+				<!--这个标签定义了表格的第一行-->
+
+					<td>&nbsp;</td>
+					<!--"td"定义表格行的单元格,“&nbsp;”是网页中实现空格的代码 -->
+
+				</tr>
+				<!--</tr>是<tr>的结束标签，表示该行结束-->
+
+			</table>
+			<!--</table>是<table>的结束标签，表示此表格结束-->
+
+  		</div>
+  		<!--</div>是<div>的结束标签-->
+
+  		<h5>3.设置了padding的div</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="div2">
+		<!--定义一个div，引用"div2"-->
+
+				<table border="1" style="width: 100%;height: 100%;">
+				<!--定义一个表格-->
+
+					<tr>
+					<!--这个标签定义了表格的第一行-->
+
+						<td>&nbsp;</td>
+						<!--"td"定义表格行的单元格,“&nbsp;”是网页中实现空格的代码-->
+
+					</tr>
+					<!--</tr>是<tr>的结束标签，表示该行结束-->
+
+				</table>
+				<!--</tr>是<tr>的结束标签，表示表格该行结束-->
+
+  		</div>
+		<!--</div>是<div>的结束标签-->
+  		
+  		<h5>4.没有设置了margin的div</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="div1">
+		<!--定义一个div-->
+
+			<div class="div3"></div>
+			<!--
+				定义一个div，</div>是<div>的结束标签（就近原则，一对一）
+				这里的div位于外部<div></div>之间，属于嵌套div，所以它受外部div样式的限制
+			-->
+
+  		</div>
+  		<!--</div>是<div>的结束标签-->
+
+  		<h5>5.设置了margin的div</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="div1">
+		<!--定义一个div-->
+
+			<div class="div4"></div>
+			<!--嵌套一个div-->
+
+  		</div>
+		<!--</div>是<div>的结束标签-->
+		
+		<h5>6.带背景图片的div</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<div class="div5">
+		<!--定义一个div，引用"div5"-->
+
+  		看我的背景图片
+  		</div>
+		<!--<div></div>之间是这块的内容，</div>是<div>的结束标签-->
+
+   </body>
+   <!--</body>是<body>的结束标签，表示HTML文档的主体结束-->
+
+</html>
+<!--</html>是<html>的结束标签，表示HTML文档结束-->
+
+<!-- 
+	注：1、div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素
+		2、".div1" 定义了一个css样式，"."定义了这个css引用的方式，该方式是使用class引用。
+		3、在css样式中：border-style定义边框样式，border-color定义边框颜色，border-width定义边框粗细
+						text-align定义文本水平对齐方向，padding-top设置元素的上内边距，margin-top定义外上边距
+						backgroud-image定义背景图片，写法为backgroud-image：url(" ")
+						backgroud-repeat设置背景图片是否及如何铺排。no-repeat背景图像不平铺,repeat背景图像在纵向和横向上平铺，
+							repeat-x背景图像在横向上平铺，repeat-y背景图像在纵向平铺
+
+	注1：html颜色是由“#”加6位16进制数组成的。每位16进制数是0－f（f表示15，0－f即0－15）。
+		例如"#ff0000"表示红色，"#00ff00"表示绿色，"#0000ff"表示蓝色。更多颜色代码可以到“百度”，“谷歌”搜索。
+-->

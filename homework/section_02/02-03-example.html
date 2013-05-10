@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!--这是一个声明。声明此网页遵循W3C所制定的DTD规则,定义了HTML的规范、版本和语言等信息-->
+
+<html>
+<!--<html>标签定义了整个 HTML 文档，它拥有一个开始标签 <html>，以及一个结束标签 </html>，一个HTML里面的所有内容都应该在这两个标签内-->
+
+	<head>
+	<!--<head>标签用于定义文档的头部开始，它是所有头部元素的容器。-->
+
+		<title>htmlDiv3</title>
+		<!--<title>标签可定义HTML文档的标题，此标签的内容会显示在浏览器的左上方-->
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!--本行定义html页面在展示的时候使用什么编码-->
+
+		<script type="text/javascript">
+		//用于定义客户端脚本JavaScript,在JavaScript中注释使用"//"，或者"/*"和"*/"
+
+			function showThird(){
+			//此行定义了一个JavaScript函数，“{”和“}”中的内容是这个函数的“函数体”，此函数在点击下面的按钮“显示第三个"时调用
+
+				var div3 = document.getElementById("thirdDiv");
+				//定义变量div3的值为thirdDiv即第三个DIV
+
+				div3.style.display = "block";
+				//显示第三个DIV的内容
+			}
+			//"}"表示这个函数结束
+
+		</script>
+		<!--JavaScript结束的标记-->
+
+		<style type="text/css">
+		/* 这个是CSS文档声明，声明是CSS文本文件，装的都是CSS代码*/
+
+			div{
+			/*
+				"div"定义了该页面中div的样式
+				相当于在该页面中所有<div>里面添上下面这样一段代码
+				style="border-style:solid;border-color: #00ff00;border-width: 1px;text-align: center;"
+				以“{”开始，以“}”结束此样式的定义
+			*/
+
+				border-style:solid;
+				/* border-style定义边框样式，solid为实线；若无边框则不设置此项，或将值设为none；若边框是虚线则值为dashed*/
+
+				border-color: #00ff00;
+				/* border-color定义边框颜色，#00ff00表示绿色*/
+
+				border-width: 1px;
+				/* border-width定义边框粗细，边框粗细为1像素*/
+
+				text-align: center;
+				/* text-align定义文本在水平方向的位置，center就是水平居中*/
+			}
+			/* 以“}”结束此样式的定义*/
+
+			#firstDiv {
+			/*
+				"#firstDiv" 定义了一个css样式，"firstDiv"是这个样式的名称
+				"#" 定义了这个css引用的方式，该方式是使用id引用。引用见下面的"<div id="firstDiv">"
+				引用了此css以后，就相当于在"<div id="firstDiv">"里面添上下面这样一段代码
+				style="left: 50px;top:150px;z-index:1;position:absolute;height: 300px;width: 500px;"
+			*/
+
+				left: 50px;
+				/* left定义该块的水平位置是距网页左边50像素*/
+
+				top:150px;
+				/* top定义该块的垂直距离网页上边150像素*/
+
+				z-index:1;
+				/*
+					z-index表示在叠加顺序上的上下立体关系
+					z-index值较大的元素将叠加在z-index值较小的元素之上。对于未指定此属性的定位对象，z-index 值为正数的对象会在其之上，而 z-index 值为负数的对象在其之下
+				*/
+
+				position:absolute;
+				/* position：absolute这个是绝对定位；它不会随着窗口大小变化，只是固定在一个特定的坐标轴上面*/
+
+				height: 300px;
+				/* height定义这个容器的高度，高度为300像素*/
+
+				width: 500px;
+				/* width定义这个容器的宽度，宽度为500像素*/
+				
+			}
+			/* 以“}”结束此样式的定义*/
+
+			#secondDiv {
+			/* "#secondDiv" 定义了一个css样式，"secondDiv"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				left: 100px;
+				/* left定义该块的水平位置是距网页左边100像素*/
+
+				top:200px;
+				/* top定义该块的垂直距离网页上边200像素*/
+
+				z-index:2;
+				/*
+					z-index在叠加顺序上的上下立体关系
+					z-index值较大的元素将叠加在z-index值较小的元素之上。对于未指定此属性的定位对象，z-index 值为正数的对象会在其之上，而 z-index 值为负数的对象在其之下
+				*/
+
+				position:absolute;
+				/* position：absolute这个是绝对定位；它不会随着窗口大小变化，只是固定在一个特定的坐标轴上面*/
+
+				height: 300px;
+				/* height定义这个容器的高度，高度为300像素*/
+
+				width: 500px;
+				/* width定义这个容器的宽度，宽度为500像素*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+			#thirdDiv {
+			/* "#thirdDiv" 定义了一个css样式，"thirdDiv"是这个样式的名称，以“{”开始，以“}”结束此样式的定义*/
+
+				left: 150px;
+				/* left定义该块的水平位置是距网页左边150像素*/
+
+				top:250px;
+				/* top定义该块的垂直距离网页上边250像素*/
+
+				z-index:3;
+				/*
+					z-index在叠加顺序上的上下立体关系
+					z-index值较大的元素将叠加在z-index值较小的元素之上。对于未指定此属性的定位对象，z-index 值为正数的对象会在其之上，而 z-index 值为负数的对象在其之下
+				*/
+
+				position:absolute;
+				/* position：absolute这个是绝对定位；它不会随着窗口大小变化，只是固定在一个特定的坐标轴上面*/
+
+				height: 300px;
+				/* height定义这个容器的高度，高度为300像素*/
+
+				width: 500px;
+				/* width定义这个容器的宽度，宽度为500像素*/
+
+				display: none;
+				/* display:none不显示该块内容；display：block显示该块内容*/
+
+			}
+			/* 以“}”结束此样式的定义*/
+
+		</style>
+		<!--</style>是<style>的结束标签，表示css文本样式定义到此结束-->
+
+	</head>
+	<!--<head>的结束标签-->
+
+	<body>
+	<!--<body>标签定义HTML文档的主体开始，将以</body>标记结束-->
+
+  		<h5>1.div的叠加：</h5>
+		<!--<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字-->
+
+  		<button onclick="showThird()">显示第三个</button>
+		<!--
+			button定义了一个按钮，按钮上的内容是“显示第三个”
+			“onclick="showThird()"”是鼠标点击这个按钮所发生的事件，这里将调用前面定义过的showThird()函数
+		-->
+
+		<div id="firstDiv">我是第一个</div>
+		<!--
+		    定义第一个div
+			div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素，<div></div>之间的所有内容都是用来构成这个块的
+	 	     id是样式选择，id="firstDiv"表示这里的div采用上面css定义中的firstDiv样式
+		     </div>是<div>的结束标签
+		-->
+
+		<div id="secondDiv">我是第二个</div>
+		<!--定义第二个div-->
+
+		<div id="thirdDiv">我是第三个</div>
+		<!--定义第三个div-->
+
+	</body>
+   <!--</body>是<body>的结束标签，表示HTML文档的主体结束-->
+
+</html>
+<!--</html>是<html>的结束标签，表示HTML文档结束-->
+
+<!-- 
+	注：在css样式中：1、z-index表示在叠加顺序上的上下立体关系。z-index值较大的元素将叠加在z-index值较小的元素之上。
+							对于未指定此属性的定位对象，z-index值为正数的对象会在其之上，而z-index值为负数的对象在其之下。
+						2、position：absolute表示这个是绝对定位；它不会随着窗口大小变化，只是固定在一个特定的坐标轴上面
+						3、left定义该块的水平位置距网页左边的距离，top定义该块的垂直位置距网页上边的距离。
+						4、display:none不显示该块内容；display：block显示该块内容
+-->
