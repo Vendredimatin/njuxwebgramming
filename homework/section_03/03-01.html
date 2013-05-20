@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>js+dom学习</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">  
+		<script type="text/javascript">
+         	
+			function addTable1() {
+				var tableHTML = "<table id='table1'></table>";
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = div1.innerHTML + tableHTML;
+				var table1 = document.getElementById("table1");
+				
+				var row1 = table1.insertRow(0);
+				
+				var col1 = row1.insertCell(0);
+				col1.align = "center";
+				col1.vAlign = "top";
+				col1.style.width = "50px";
+				col1.style.height = "50px";
+				col1.style.borderStyle = "solid";
+				col1.style.borderWidth = "1px";
+				col1.innerHTML = "A";
+
+				var col2 = row1.insertCell(1);
+				col2.align = "center";
+				col2.vAlign = "top";
+				col2.style.width = "50px";
+				col2.style.height = "50px";
+				col2.style.borderStyle = "solid";
+				col2.style.borderWidth = "1px";
+				col2.innerHTML = "B";
+
+				var button1 = document.getElementById("button1");
+				button1.disabled = true;
+			}
+
+			function addTable2() {
+				var tableHTML = "<table id='table2'></table>";
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = div1.innerHTML + tableHTML;
+				var table2 = document.getElementById("table2");
+				
+				var row1 = table2.insertRow(0);
+				
+				var col1 = row1.insertCell(0);
+				col1.align = "center";
+				col1.vAlign = "top";
+				col1.style.width = "50px";
+				col1.style.height = "50px";
+				col1.style.borderStyle = "solid";
+				col1.style.borderWidth = "1px";
+				col1.innerHTML = "A";
+
+				var col2 = row1.insertCell(1);
+				col2.align = "center";
+				col2.vAlign = "top";
+				col2.style.width = "50px";
+				col2.style.height = "50px";
+				col2.style.borderStyle = "solid";
+				col2.style.borderWidth = "1px";
+				col2.innerHTML = "B";
+
+				var button2 = document.getElementById("button2");
+				button2.disabled = true;
+			}
+
+			function addTable3() {
+				var tableHTML = "<table id='table3'></table>";
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = div1.innerHTML + tableHTML;
+				var table3 = document.getElementById("table3");
+				
+				var row1 = table3.insertRow(0);
+				
+				var col1 = row1.insertCell(0);
+				col1.align = "center";
+				col1.vAlign = "top";
+				col1.style.width = "50px";
+				col1.style.height = "50px";
+				col1.style.borderStyle = "solid";
+				col1.style.borderWidth = "1px";
+				col1.innerHTML = "A";
+
+				var col2 = row1.insertCell(1);
+				col2.align = "center";
+				col2.vAlign = "top";
+				col2.style.width = "50px";
+				col2.style.height = "50px";
+				col2.style.borderStyle = "solid";
+				col2.style.borderWidth = "1px";
+				col2.innerHTML = "B";
+
+				var button3 = document.getElementById("button3");
+				button3.disabled = true;
+			}
+
+			function addRow() {
+				var table1 = document.getElementById("table1");
+				var row2 = table1.insertRow(1);
+
+				var col1 = row2.insertCell(0);
+				col1.align = "center";
+				col1.vAlign = "top";
+				col1.style.width = "50px";
+				col1.style.height = "50px";
+				col1.style.borderStyle = "solid";
+				col1.style.borderWidth = "1px";
+				col1.innerHTML = "c";
+
+				var col2 = row2.insertCell(1);
+				col2.align = "center";
+				col2.vAlign = "top";
+				col2.style.width = "50px";
+				col2.style.height = "50px";
+				col2.style.borderStyle = "solid";
+				col2.style.borderWidth = "1px";
+				col2.innerHTML = "d";
+			}
+
+			function addCellBack() {
+				var table2 = document.getElementById("table2");
+				var row1 = table2.rows[0];
+				var col = row1.insertCell(2);
+				col.align = "center";
+				col.vAlign = "top";
+				col.style.width = "50px";
+				col.style.height = "50px";
+				col.style.borderStyle = "solid";
+				col.style.borderWidth = "1px";
+			}
+
+			function addCellCenter() {
+				var table3 = document.getElementById("table3");
+				var row1 = table3.rows[0];
+				var col = row1.insertCell(1);
+				col.align = "center";
+				col.vAlign = "top";
+				col.style.width = "50px";
+				col.style.height = "50px";
+				col.style.borderStyle = "solid";
+				col.style.borderWidth = "1px";
+			}
+
+			function reset() {
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = "";
+
+				var button1 = document.getElementById("button1");
+				var button2 = document.getElementById("button2");
+				var button3 = document.getElementById("button3");
+
+				button1.disabled = false;
+				button2.disabled = false;
+				button3.disabled = false;
+			}
+
+		</script>            
+	</head>
+
+	<body>
+      <div id="div1" style="width: 800px; height: 400px; border: 1px solid;"></div>
+      <button id="button1" onclick="addTable1()">添加表格1</button>
+      <button id="button2" onclick="addTable2()">添加表格2</button>
+      <button id="button3" onclick="addTable3()">添加表格3</button>
+      <button id="button4" onclick="addRow()">添加行</button>
+      <button id="button5" onclick="addCellBack()">添加单元格（后）</button>
+      <button id="button6" onclick="addCellCenter()">添加单元格（中）</button>
+      <button id="button7" onclick="reset()">重置</button>
+	</body>
+</html>

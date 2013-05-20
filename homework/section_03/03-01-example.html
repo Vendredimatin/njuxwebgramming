@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!--这是一个声明。声明此网页遵循W3C所制定的DTD规则,定义了HTML的规范、版本和语言等信息-->
+
+<html>
+<!--<html>标签定义了整个 HTML 文档，它拥有一个开始标签 <html>，以及一个结束标签 </html>，一个HTML里面的所有内容都应该在这两个标签内-->
+
+	<head>
+	<!--<head>标签用于定义文档的头部开始，它是所有头部元素的容器。-->
+
+		<title>htmlDom1</title>
+		<!--<title>标签可定义HTML文档的标题，此标签的内容会显示在浏览器的左上方-->
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!--本行定义html页面在展示的时候使用什么编码-->
+		 
+		<script type="text/javascript">
+		//本行表示插入一段JavaScript脚本，<script> 标签用于定义客户端脚本，type="text/javascript"说明插入的是javascript脚本
+		 
+	 		function addTab1() {
+			//JavaScript函数，function为关键字，定义此为一个函数，addTable()是函数名,'{'表示函数开始
+
+	 			var tableHtml = "<table id='tab1'></table>";
+	 			//定义一个字符串，该字符串是一个空的表格。"<table id='tab1'><//table>"表示一个空表格
+	 			
+	 			var div1 = document.getElementById("div1");
+	 			//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+	 			
+				div1.innerHTML = div1.innerHTML + tableHtml;
+				//在div1里面追加一个表格，div1.innerHTML可以取出div1里面原来的内容，我们给这个div里面的HTML再加上一个Table
+				
+				var tab1 = document.getElementById("tab1");
+				//根据Id获取插入的table，并赋给tab1。"tab1"对应"<table id='tab1'><//table>"中的"tab1"
+				
+				var row1 = tab1.insertRow(0);
+				//给表格插入一个行，并将其赋给row1。insertRow表示插入行
+				
+				var col1 = row1.insertCell(0);
+				//给row1最左边插入一个单元格，并将其赋给col1.insertCell(0)表示在此行的最左边插入单元格，(1)表示在第一个单元格后插入，依次类推。
+				
+				col1.align = "center";
+				//设置单元格内容水平居中.col1.align表示col1这个单元格的文字水平方向位置,"center"表示水平居中。
+				
+				col1.vAlign = "middle";
+				//设置单元格内容垂直居中.col1.vAlign表示col1这个单元格的文字垂直方向位置,"middle"表示水平居中。
+				
+				col1.innerHTML = "A";
+				//设置单元格里面的内容为“A”
+				
+				col1.style.width = "50px";
+				//设置单元格的宽度为50像素。style表示单元格样式，width表示宽度，"50px"表示宽度为50像素
+				
+				col1.style.height = "50px";
+				//设置单元格的高度为50像素，height表示高度
+				
+				col1.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线，borderStyle表示边框样式，"solid"为实线
+				
+				col1.style.borderWidth = "1px";
+				//设置单元格的边框线的粗细为1像素，borderWidth表示边框粗细，"1px"表示边框粗细为1像素
+				
+				var col2 = row1.insertCell(1);
+				//给row1插入一个单元格，并将其赋给col2.
+
+				col2.align = "center";
+				//设置单元格内容水平居中
+
+				col2.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col2.innerHTML = "B";
+				//设置单元格里面的内容为“B”
+
+				col2.style.width = "50px";
+				//设置单元格的宽度为50像素。style表示单元格样式，width表示宽度，"50px"表示宽度为50像素
+				
+				col2.style.height = "50px";
+				//设置单元格的高度为50像素，height表示高度
+				
+				col2.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+				
+				col2.style.borderWidth = "1px";
+				//设置单元格的边框线的粗细为1像素
+				
+				var btn1 = document.getElementById("btn1");
+				//根据id获取按钮“btn1”，并将其赋给btn1，"btn1"与主体中的"id='btn1'"对应
+				
+				btn1.disabled = true;
+				//设置让btn1变灰、不能用。btn1.disabled设置按钮属性，true表示不能用，false表示可用。
+
+			}
+			//'}'表示函数结束
+			function addTab2(){
+			//JavaScript函数，function为关键字，定义此为一个函数，addTable()是函数名,'{'表示函数开始
+
+	 			var tableHtml = "<table id='tab2'></table>";
+	 			//定义一个字符串，该字符串是一个空的表格。"<table id='tab2'><//table>"表示一个空表格
+	 			
+	 			var div1 = document.getElementById("div1");
+	 			//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+	 			
+				div1.innerHTML = div1.innerHTML + tableHtml;
+				//在div1里面追加一个表格，div1.innerHTML可以取出div1里面原来的内容，我们给这个div里面的HTML再加上一个Table
+				
+				var tab2 = document.getElementById("tab2");
+				//根据Id获取插入的table，并赋给tab2。"tab2"对应"<table id='tab2'><//table>"中的"tab2"
+				
+				var row1 = tab2.insertRow(0);
+				//给表格插入一个行，并将其赋给row1。insertRow表示插入行
+				
+				var col1 = row1.insertCell(0);
+				//给row1最左边插入一个单元格，并将其赋给col1.insertCell(0)表示在此行的最左边插入单元格，(1)表示在第一个单元格后插入，依次类推。
+				
+				col1.align = "center";
+				//设置单元格内容水平居中.col1.align表示col1这个单元格的文字水平方向位置,"center"表示水平居中。
+				
+				col1.vAlign = "middle";
+				//设置单元格内容垂直居中.col1.vAlign表示col1这个单元格的文字垂直方向位置,"middle"表示水平居中。
+				
+				col1.innerHTML = "A";
+				//设置单元格里面的内容为“A”
+				
+				col1.style.width = "50px";
+				//设置单元格的宽度为50像素。style表示单元格样式，width表示宽度，"50px"表示宽度为50像素
+				
+				col1.style.height = "50px";
+				//设置单元格的高度为50像素，height表示高度
+				
+				col1.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线，borderStyle表示边框样式，"solid"为实线
+				
+				col1.style.borderWidth = "1px";
+				//设置单元格的边框线的粗细为1像素，borderWidth表示边框粗细，"1px"表示边框粗细为1像素
+				
+				var btn2 = document.getElementById("btn2");
+				//根据id获取按钮“btn3”，并将其赋给btn3，"btn3"与主体中的"id='btn3'"对应
+				
+				btn2.disabled = true;
+				//设置让btn3变灰、不能用。btn1.disabled设置按钮属性，true表示不能用，false表示可用。
+
+			}
+			//'}'表示函数结束
+
+			function addTab3(){
+			//JavaScript函数，function为关键字，定义此为一个函数，addCol()是函数名,'{'表示函数开始
+
+				var tabHtml="<table id='tab3'></table>";
+                var div1= document.getElementById("div1");
+
+                div1.innerHTML = div1.innerHTML + tabHtml;
+                var tab3 = document.getElementById("tab3");
+
+				var row1 = tab3.insertRow(0);
+				var col1 = row1.insertCell(0);
+				//给row1最左边插入一个单元格，并将其赋给col1.
+
+				col1.align = "center";
+				//设置单元格内容水平居中
+
+				col1.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col1.innerHTML = "A";
+				//设置单元格里面的内容为变量"i"
+
+				col1.style.width = "50px";
+				//设置单元格的宽度为50像素
+
+				col1.style.height = "50px";
+				//设置单元格的高度为50像素
+
+				col1.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+
+				col1.style.borderWidth = "1px";
+				//设置单元格的边框线的粗细为1像素
+
+				var col2 = row1.insertCell(1);
+				//给row1最左边插入一个单元格，并将其赋给col1.
+
+				col2.align = "center";
+				//设置单元格内容水平居中
+
+				col2.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col2.innerHTML = "B";
+				//设置单元格里面的内容为变量"i"
+
+				col2.style.width = "50px";
+				//设置单元格的宽度为50像素
+
+				col2.style.height = "50px";
+				//设置单元格的高度为50像素
+
+				col2.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+
+				col2.style.borderWidth = "1px";
+
+				var btn3=document.getElementById("btn3");
+				btn3.disabled=true;
+			}
+			//'}'表示函数结束
+
+			function reSet(){
+			//JavaScript函数，function为关键字，定义此为一个函数，resetDiv()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1
+				
+				div1.innerHTML = "";
+				//清空div1。""表示插入内容为空
+				
+				var btn1 = document.getElementById("btn1");
+				//根据id获取按钮“btn1”，并将其赋给btn1
+				var btn2 = document.getElementById("btn2");
+				var btn3 = document.getElementById("btn3");
+				//根据id获取按钮“btn3”，并将其赋给btn3
+
+				btn1.disabled = false;
+				//设置让btn1可用。
+				btn2.disabled = false;
+				btn3.disabled = false;
+				//设置让btn3可用。
+
+			}
+			//'}'表示函数结束
+
+			function addRow() {
+				var tab1 = document.getElementById("tab1");
+				var row1 = tab1.insertRow(1);
+				var col1 = row1.insertCell(0);
+				col1.align = "center";
+				//设置单元格内容水平居中
+
+				col1.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col1.innerHTML = "B";
+				//设置单元格里面的内容为变量"i"
+
+				col1.style.width = "50px";
+				//设置单元格的宽度为50像素
+
+				col1.style.height = "50px";
+				//设置单元格的高度为50像素
+
+				col1.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+
+				col1.style.borderWidth = "1px";
+
+				var col2=row1.insertCell(1);
+				col2.align = "center";
+				//设置单元格内容水平居中
+
+				col2.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col2.innerHTML = "B";
+				//设置单元格里面的内容为变量"i"
+
+				col2.style.width = "50px";
+				//设置单元格的宽度为50像素
+
+				col2.style.height = "50px";
+				//设置单元格的高度为50像素
+
+				col2.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+
+				col2.style.borderWidth = "1px";
+			}
+
+			function addCellBack() {
+				var tab1 = document.getElementById("tab3");
+				var row1 = tab1.rows[0];
+				var col1 = row1.insertCell(2);
+				col1.align = "center";
+				//设置单元格内容水平居中
+
+				col1.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col1.innerHTML = "1";
+				//设置单元格里面的内容为变量"i"
+
+				col1.style.width = "50px";
+				//设置单元格的宽度为50像素
+
+				col1.style.height = "50px";
+				//设置单元格的高度为50像素
+
+				col1.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+
+				col1.style.borderWidth = "1px";
+			}
+
+			function addCellCenter() {
+				var tab1 = document.getElementById("tab3");
+				var row1 = tab1.rows[0];
+				var col1 = row1.insertCell(1);
+				col1.align = "center";
+				//设置单元格内容水平居中
+
+				col1.vAlign = "middle";
+				//设置单元格内容垂直居中
+
+				col1.innerHTML = "2";
+				//设置单元格里面的内容为变量"i"
+
+				col1.style.width = "50px";
+				//设置单元格的宽度为50像素
+
+				col1.style.height = "50px";
+				//设置单元格的高度为50像素
+
+				col1.style.borderStyle = "solid";
+				//设置单元格的边框样式为实线
+
+				col1.style.borderWidth = "1px";
+			}
+		</script>
+		<!--<script>的结束标签-->
+
+	</head>
+	<!--<head>的结束标签-->
+
+	<body>
+	<!--<body>标签定义HTML文档的主体开始，将以</body>标记结束-->
+
+
+		<div id="div1" style="width: 800px;height: 400px; border: 1px solid;">
+		<!--
+			此行表示建立一个div，宽度为800像素，高度为400像素，边框是1像素的实线。
+			div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素
+			<div></div>之间的所有内容都是用来构成这个块的
+		-->	
+				
+		</div>
+		<!--</div>是<div>的结束标签-->
+
+		<button id="btn1" onclick="addTab1()">添加表格1</button>
+		<!--
+			设置一个按钮，点击它的时候执行JavaScript的addTable()函数
+			button表示一个按钮，onclick="addTable()"说明当我们点击按钮的时候要执行JavaScript的addTable()函数
+			</button>是这个按钮的结束标签，<button>和</button>之间的内容为按钮上显示的内容
+		-->
+
+		<button id="btn2" onclick="addTab2()">添加表格2</button>
+		<button id="btn3" onclick="addTab3()">添加表格3</button>
+		<button id="btn4" onclick="addRow()">添加单元格</button>
+		<!--设置一个按钮,点击它的时候执行JavaScript的addCol()函数-->
+		
+		<button id="btn5" onclick="addCellBack()">添加单元格（后）</button>
+		<!--设置一个按钮,点击它的时候执行JavaScript的addTable2()函数-->
+		
+		<button id="btn6" onclick="addCellCenter()">添加单元格（中）</button>
+		<!--设置一个按钮,点击它的时候执行JavaScript的resetDiv()函数-->
+		<button id="btn7" onclick="reSet()">重置</button>
+	</body>
+	<!--</body>是<body>的结束标签，表示HTML文档的主体结束-->
+
+</html>
+<!--</html>是<html>的结束标签，表示HTML文档结束-->
+
+<!-- 
+	注：在javascript函数中：1、innerHTML属性设置或返回表格行的开始和结束标签之间的 HTML。
+								2、vAlign设置垂直方向的位置，这里valign中的"a"要大写
+-->
