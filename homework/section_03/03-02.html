@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>htmlDom2</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<script type="text/javascript">
+			var upper = 200;  //为神马这里的变量名不能用top
+			var left = 200;
+			var width = 500;
+			var height = 300;
+
+			function showDiv() {
+				var div1 = document.getElementById("div1");
+				div1.style.display = "block";
+			}
+
+			//将文档声明为<!DOCTYPE html>后这两个函数就不起作用了，为神马。。。
+			function moveDown() {
+				var div1 = document.getElementById("div1");
+				upper = upper + 10;
+				div1.style.top = upper;
+			}
+
+			function moveRight() {
+				var div1 = document.getElementById("div1");
+				left = left + 10;
+				div1.style.left = left;
+			}
+
+			function shrink() {
+				var div1 = document.getElementById("div1");
+				width = width - 10;
+				height = height - 10;
+				div1.style.width = width;
+				div1.style.height = height;
+			}
+
+			function insertLink() {
+				var txt1 = document.getElementById("txt1");
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = "<a href='http://www.163.com'>" + txt1.value + "</a>";
+			}
+
+			function addLink() {
+				var txt1 = document.getElementById("txt1");
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = div1.innerHTML + "<a href='http://www.baidu.com'>" + txt1.value + "</a>";	
+			}
+
+			function addPic() {
+				var div1 = document.getElementById("div1");
+				div1.innerHTML = div1.innerHTML + "<img src='http://www.baidu.com/img/baidu_logo.gif'>";
+			}
+		</script>
+	</head>
+	
+	<body>
+		<button onclick="showDiv()">显示</button>
+		<button onclick="moveDown()">下移</button>
+		<button onclick="moveRight()">右移</button>
+		<button onclick="shrink()">变小</button>
+		<input type="text" id="txt1">
+		<button onclick="insertLink()">插入链接</button>
+		<button onclick="addLink()">追加链接</button>
+		<button onclick="addPic()">添加图片</button>
+		<div id="div1" style="width: 500px; height: 300px; border: 1px solid; position: absolute; top: 200px; left: 200px; display: none;"></div>
+	</body>
+</html>

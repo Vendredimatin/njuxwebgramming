@@ -1,0 +1,192 @@
+<html>
+<!--<html>标签定义了整个 HTML 文档，它拥有一个开始标签 <html>，以及一个结束标签 </html>，一个HTML里面的所有内容都应该在这两个标签内-->
+
+	<head>
+	<!--<head>标签用于定义文档的头部开始，它是所有头部元素的容器。-->
+
+		<title>htmlDom2</title>
+		<!--<title>标签可定义HTML文档的标题，此标签的内容会显示在浏览器的左上方；</title>是<title>的结束标签；<title></title>之间是显示的内容-->
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!--本行定义html页面在展示的时候使用什么编码-->
+       
+		<script type="text/javascript">
+		//本行表示插入一段JavaScript脚本，<script> 标签用于定义客户端脚本，type="text/javascript"说明插入的是javascript脚本
+
+			var left = 200;
+			//定义left的值为200，与div1中left的值对应，方便函数中变量的引用
+
+			var upper = 200;
+			//定义upper的值为200
+
+			var width = 500;
+			//定义div1的宽度为500
+
+			var height = 300;
+			//定义div1的高度为300
+
+			function insertA(){
+			//JavaScript函数，function为关键字，定义此为一个函数，insertA()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				div1.innerHTML = "<a href='http://www.baidu.com'>百度<//a>";
+				//在div1里面插入一个链接。
+				//div1.innerHTML表示在div1中插入内容，"<a href='http://www.baidu.com'>百度<//a>"表示插入的是链接，链接的名称是"百度"
+
+			}
+			//'}'表示函数结束
+
+			function insertWord(){
+			//JavaScript函数，function为关键字，定义此为一个函数，insertWord()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				var txt1 = document.getElementById("txt1");
+				//根据Id获取txt，并赋给txt1。"txt1"与下面id="txt1"相对应
+
+				div1.innerHTML = txt1.value;
+				//在div1里面插入一个文本，文本的值为txt1中输入的内容。
+
+			}
+			//'}'表示函数结束
+
+			function moveTop(){
+			//JavaScript函数，function为关键字，定义此为一个函数，moveTop()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				upper = upper - 10;
+				//div1距页面顶端的距离减少10px. upper的新值为以前的值减少10px
+
+				div1.style.top = upper;
+				//设置div1的距页面顶端的距离为upper的新值。div1.style.top是设置div1距页面顶端的距离
+
+			}
+			//'}'表示函数结束
+
+			function moveLeft(){
+			//JavaScript函数，function为关键字，定义此为一个函数，moveLeft()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				left = left - 10;
+				//div1距页面左边的距离减少10px. left的新值为以前的值减少10px
+
+				div1.style.left = left;
+				//设置div1的距页面左边的距离为left的新值。div1.style.left是设置div1距页面左边的距离
+
+			}
+			//'}'表示函数结束
+
+			function changeWidth(){
+			//JavaScript函数，function为关键字，定义此为一个函数，changeWidth()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				width = width + 10;
+				//div1的宽度增加10px. width的新值为以前的值增加10px
+
+				div1.style.width = width;
+				//设置div1的宽度为width的新值。div1.style.width是设置div1的宽度
+
+			}
+			//'}'表示函数结束
+
+			function changeheight(){
+			//JavaScript函数，function为关键字，定义此为一个函数，changeheight()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				height = height + 10;
+				//div1的高度增加10px. height的新值为以前的值增加10px
+
+				div1.style.height = height;
+				//设置div1的高度为height的新值。div1.style.height是设置div1的高度
+
+			}
+			//'}'表示函数结束
+
+			function showDiv(){
+			//JavaScript函数，function为关键字，定义此为一个函数，showDiv()是函数名,'{'表示函数开始
+
+				var div1 = document.getElementById("div1");
+				//根据Id获取div，并赋给div1。"div1"与下面id="div1"相对应
+
+				div1.style.display = "none";
+				//设置div1默认显示。div1.style.display是设置div1的显示方式，none表示隐藏，block为显示。
+
+			}
+			//'}'表示函数结束
+
+		</script>
+		 <!--<script>的结束标签-->
+
+	</head>
+	<!--<head>的结束标签-->
+
+	<body>
+	<!--<body>标签定义HTML文档的主体开始，将以</body>标记结束-->
+
+		<h5>JavaScript 操作div</h5>
+		<!--
+			本行定义标题文字的大小和内容
+			<h5>标签是标题标签，'h'后面的数字'5'表示标题的大小，<h6>最小，<h1>最大。<h5></h5>之间的内容是标题的文字
+		-->
+
+		<button onclick="moveTop()">上移</button>
+		<!--
+			设置一个按钮，点击它的时候执行JavaScript的addTable()函数
+			button表示一个按钮，onclick="moveTop()"说明当我们点击按钮的时候要执行JavaScript的moveTop()函数
+			</button>是这个按钮的结束标签，<button>和</button>之间的内容为按钮上显示的内容
+		-->
+
+		<button onclick="moveLeft()">左移</button>
+		<!--设置一个按钮，点击它的时候执行JavaScript的moveLeft()函数-->
+
+		<button onclick="changeWidth()">变宽</button>
+		<!--设置一个按钮，点击它的时候执行JavaScript的changeWidth()函数-->
+
+		<button onclick="changeheight()">变高</button>
+		<!--设置一个按钮，点击它的时候执行JavaScript的changeheight()函数-->
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<!--&nbsp;表示空格，一个&nbsp;是一个空格-->
+
+		输入框：<input type="text" id="txt1" />
+		<!--
+			添加一个输入框，输入的内容为文本格式
+			input表示添加一个输入框，type="text"表示输入的内容为文本格式，id="txt1"对应JavaScript脚本中的"txt1"," /"为input的结束标签
+		-->
+
+		<button onclick="insertWord()">插入文字</button>
+		<!--设置一个按钮，点击它的时候执行JavaScript的insertWord()函数-->
+
+		<button onclick="insertA()">插入链接</button>
+		<!--设置一个按钮，点击它的时候执行JavaScript的insertA()函数-->
+
+		<button onclick="showDiv()">隐藏</button>
+		<!--设置一个按钮，点击它的时候执行JavaScript的showDiv()函数-->
+
+		<div id="div1" style="width: 500px; height: 300px; border: 1px solid; position: absolute; top: 200px; left: 200px;">
+		<!--
+			此行表示建立一个位置固定的div，宽度为500像素，高度为300像素，边框是1像素的实线，距页面左边200像素、顶端200像素。
+			div是用来为HTML文档内大块（block-level）的内容提供结构和背景的元素
+			id="div1"对应JavaScript脚本中的"div1"，style定义div的风格；border是div的边框属性，solid表示实线。position: absolute表示div位置固定
+			<div></div>之间的所有内容都是用来构成这个块的
+		-->
+				
+		</div>
+		<!--<div>的结束标签-->
+
+	</body>
+	<!--</body>是<body>的结束标签，表示HTML文档的主体结束-->
+
+</html>
+<!--</html>是<html>的结束标签，表示HTML文档结束-->
